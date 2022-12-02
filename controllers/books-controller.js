@@ -79,10 +79,10 @@ const updateBook = async (req, res, next) => {
 };
 
 const deleteBook = async (req, res, next) => {
-  const id = req.params._id; 
+  const id = req.params.id; 
   let book;
   try {
-    book = await Book.findByIdAndRemove(id);
+    book = await Book.findByIdAndDelete(id);  
   console.log(id); 
   } catch (error) {
     console.log(error);
